@@ -1,0 +1,152 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary-color: rgb(41, 48, 68);
+  --text-color: whitesmoke;
+
+}
+
+body {
+  line-height: 1;
+
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-primary-color);
+  padding: 1rem;
+  position: relative;
+  color: var(--text-color);
+  box-shadow: 0 0 10px black;
+  z-index: 2;
+
+}
+
+.subHeader {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/public/assets/photos/karthik-sreenivas-1N_78ShYQFg-unsplash.jpg');
+  background-repeat: none;
+  background-size: cover;
+  background-position: top;
+  position: relative;
+}
+
+.mask {
+  background-color: rgba(0, 0, 0, 0.315);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.dateInfo {
+  font-size: 25pt;
+  z-index: 3;
+  color: var(--text-color)
+}
+
+.timerNow {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  color: var(--text-color);
+  font-size: 18pt;
+}
+
+.root {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+.cardNews{
+  background-color: dodgerblue;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu .item_menu {
+  margin: 10px;
+  cursor: pointer;
+
+}
+
+.menu .item_menu:hover::before {
+  content: '⤴';
+  position: absolute;
+  bottom: 0;
+
+}
