@@ -3,16 +3,17 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  --bg-primary-color: rgb(41, 48, 68);
+  --text-color: whitesmoke;
+  --text-hover-color: dodgerblue
 }
 
 a {
@@ -20,8 +21,9 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
-  color: #535bf2;
+  color: var(--text-hover-color);
 }
 
 body {
@@ -29,17 +31,17 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  line-height: 1;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  
 }
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -48,17 +50,6 @@ h1 {
   font: inherit;
   vertical-align: baseline;
   box-sizing: border-box;
-}
-
-:root {
-  --bg-primary-color: rgb(41, 48, 68);
-  --text-color: whitesmoke;
-
-}
-
-body {
-  line-height: 1;
-
 }
 
 ol,
@@ -73,14 +64,32 @@ table {
 
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background-color: var(--bg-primary-color);
-  padding: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 100%;
   position: relative;
   color: var(--text-color);
   box-shadow: 0 0 10px black;
   z-index: 2;
+
+}
+
+.menu {
+  display: flex;
+}
+
+.menu .item_menu {
+  margin: 10px;
+  cursor: pointer;
+  transition: 200ms ease-out;
+
+}
+
+.menu .item_menu:hover {
+  color: var(--text-hover-color);
 
 }
 
@@ -89,10 +98,10 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('/public/assets/photos/karthik-sreenivas-1N_78ShYQFg-unsplash.jpg');
+  background-image: url('/public/assets/photos/moon.jpg');
   background-repeat: none;
   background-size: cover;
-  background-position: top;
+  background-position: bottom;
   position: relative;
 }
 
@@ -114,39 +123,17 @@ header {
 
 .timerNow {
   position: absolute;
-  right: 30px;
-  bottom: 20px;
+  right: 20px;
+  bottom: 15px;
   color: var(--text-color);
   font-size: 18pt;
 }
 
-.root {
-  height: 100vh;
-  display: flex;
-  justify-content: space-evenly;
-}
-.cardNews{
+.cardNews {
   background-color: dodgerblue;
   height: 100px;
   width: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.menu {
-  display: flex;
-}
-
-.menu .item_menu {
-  margin: 10px;
-  cursor: pointer;
-
-}
-
-.menu .item_menu:hover::before {
-  content: '⤴';
-  position: absolute;
-  bottom: 0;
-
 }
