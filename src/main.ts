@@ -1,6 +1,12 @@
 import './style.css'
 import { GenerateMenus } from './components/list-of-menus'
-import { DateNow } from './components/subheader'
+import { InformationAboutDate } from './components/date'
+import { InformationAboutTime } from './components/time'
+// import { BlogContentController } from './components/blogCard/blogCardController'
 
 GenerateMenus.generateMenuByString()
-DateNow.showInfoAboutDate()
+InformationAboutDate.showInfoAboutDate()
+InformationAboutTime.showTimer()
+// const i = new BlogContentController
+// console.log(i.showListOfBlogContent())
+
