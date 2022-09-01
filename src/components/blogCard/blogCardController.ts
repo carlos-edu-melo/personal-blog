@@ -1,13 +1,31 @@
-import { BlogContentModel } from "./blogCardModel";
+import { list } from "./list-of-cards";
+
+const $containerCardContent = document.querySelector('.containerCardContent') as HTMLDivElement
 
 export class BlogContentController {
 
-  public showListOfBlogContent = (): BlogContentModel[] => {
-    let list: BlogContentModel[] = [
-      new BlogContentModel('Title test', 'Loren upsu Loren upsu', '29/08/22', 'Loren upsu Loren upsuLoren upsu Loren upsuLoren upsu Loren upsu'),
-      new BlogContentModel('Title test', 'Loren upsu Loren upsu', '29/08/22', 'Loren upsu Loren upsuLoren upsu Loren upsuLoren upsu Loren upsu')
-    ]
+  static showListOfBlogContent = () => {
 
-    return list
+    for (let card of list) {
+      const cardContent = document.createElement('div') as HTMLDivElement;
+      cardContent.className = 'cardContent'
+      const title = document.createElement('h3') as HTMLElement;
+      const description = document.createElement('p') as HTMLParagraphElement
+      const date = document.createElement('i') as HTMLElement
+      const content = document.createElement('p') as HTMLParagraphElement
+
+      title.textContent = card.title
+      description.textContent = card.description
+      date.textContent = card.date
+      content.textContent = card.content || 'null'
+
+      cardContent.appendChild(title)
+      cardContent.appendChild(description)
+      cardContent.appendChild(content)
+      cardContent.appendChild(date)
+
+      $containerCardContent.appendChild(cardContent)
+
+    }
   }
 }

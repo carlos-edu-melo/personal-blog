@@ -4,15 +4,15 @@
   line-height: 24px;
   font-weight: 400;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #212529;
+  background-color: #f8f9fa;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  --bg-primary-color: rgb(41, 48, 68);
-  --text-color: whitesmoke;
+  --bg-primary-color: #212529;
+  --text-color: #f8f9fa;
   --text-hover-color: dodgerblue
 }
 
@@ -37,7 +37,7 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-  
+
 }
 
 #app {
@@ -63,6 +63,8 @@ table {
 }
 
 header {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,7 +72,6 @@ header {
   padding-left: 1rem;
   padding-right: 1rem;
   font-size: 100%;
-  position: relative;
   color: var(--text-color);
   box-shadow: 0 0 10px black;
   z-index: 2;
@@ -85,6 +86,7 @@ header {
   margin: 10px;
   cursor: pointer;
   transition: 200ms ease-out;
+  font-weight: bold;
 
 }
 
@@ -103,6 +105,7 @@ header {
   background-size: cover;
   background-position: bottom;
   position: relative;
+  color: var(--text-color);
 }
 
 .mask {
@@ -118,22 +121,48 @@ header {
 .dateInfo {
   font-size: 25pt;
   z-index: 3;
-  color: var(--text-color)
+
 }
 
 .timerNow {
   position: absolute;
   right: 20px;
   bottom: 15px;
-  color: var(--text-color);
   font-size: 18pt;
 }
 
-.cardNews {
-  background-color: dodgerblue;
-  height: 100px;
-  width: 100px;
+.containerCardContent {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: 1fr 1fr;
+
+}
+
+.cardContent {
+  background-color: var(--bg-primary-color);
+  color: var(--text-color);
   display: flex;
   flex-direction: column;
+  margin: 1rem;
+  justify-content: space-evenly;
   align-items: center;
+  border-radius: 10px;
+  padding: 10px;
+  transition: 200ms ease-in-out;
+
+}
+
+.cardContent:hover {
+  transform: scale(1.02);
+}
+
+
+
+@media (max-width: 700px) {
+  .containerCardContent {
+    display: grid;
+    grid-template-columns: 1fr;
+
+
+  }
 }
